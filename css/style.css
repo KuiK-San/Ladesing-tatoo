@@ -1,3 +1,6 @@
+::root{
+    font-size: 62,5%;
+}
 body, html{
     height: 100%;
     width: 100%;
@@ -6,9 +9,24 @@ body, html{
     font-family: '?????';
     font-style: normal;
 }
-.container-fluid{
-    padding: 0;
+a{
+    font-family: '?????';
+    font-style: normal;
 }
 nav{
     background-color: black;
 }
+/* nav .nav-item{
+    border-bottom: solid 2px white;
+    padding-right: 2%;
+    padding-left: 2%;
+    text-align: center;
+    margin-right: 1.5%;
+}
+nav .nav-item:hover{
+    background-color: white;
+}
+#navlink:hover{
+    color: black;
+    
+} */
