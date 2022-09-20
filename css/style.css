@@ -1,41 +1,45 @@
-::root{
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;900&display=swap');
+:root{
     font-size: 62,5%;
 }
 body, html{
     height: 100%;
-    width: 100%;
+    width: 100% !important;
     margin: 0;
     padding: 0;
-    font-family: '?????';
-    font-style: normal;
-}
-a{
-    font-family: '?????';
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
 }
 nav{
-    background-color: black;
+    background: linear-gradient(180deg, #000000 41.88%, rgba(0, 0, 0, 0) 100%) !important;
+    z-index: 1 !important;
+
 }
- nav .nav-item{
-    border-bottom: solid 2px white;
-    text-align: center;
-    margin-right: 2%;
-    display: flex;
-    justify-content: center;
-    align-content: center;
+li > a{
+    font-weight: 300 ;
 }
-nav .nav-item:hover{
-    background-color: white;
+nav a:hover{
+    background-color: transparent !important;
 }
-#navlink:hover{
-    color: black;
+header{
+    margin-top: -64px !important;
+    width: 100% !important;
+    height: 100% !important;
+    overflow: hidden;
+}
+header > img{
     
-}
-nav .nav-link{
-    text-align: center;
-/*     background-color: blue; */
-    width: 100%;
     height: 100%;
-    display: flex;
-    align-items: center;
+}
+@media screen and (max-width: 1200px) {
+    header > img{
+        display: none;
+        background-image: url("../img/header.png");
+        background-size: 100%;
+    }
+}
+article{
+    width: 100%;
+    height: 5%;
+    background-color: aqua;
 }
