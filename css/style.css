@@ -3,12 +3,14 @@
     font-size: 62,5%;
 }
 body, html{
+    background-color: black;
     height: 100%;
     width: 100% !important;
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
+    box-sizing: border-box;
 }
 nav{
     background: linear-gradient(180deg, #000000 41.88%, rgba(0, 0, 0, 0) 100%) !important;
