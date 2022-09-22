@@ -4,18 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Materialize area start -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <!-- Materialize area end -->
-    <!-- font awesome -->
-    <script src="https://kit.fontawesome.com/61b248fb6c.js" crossorigin="anonymous"></script>
-    <!-- font awesome -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/scroll.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <?php
+    include('modelos/imports.html');
+    ?>
     <title>Home - LaDesign</title>
 </head>
 <body>
