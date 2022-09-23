@@ -67,3 +67,22 @@ i:hover{
     padding-top: calc(64px + 64px);
     margin-top: -64px;
 }
+.cadastro{
+    background-color: aqua;
+    height: 100%;
+    width: 100%;
+}
+.input-field input:focus + label {
+    color: #000000 !important;
+}
+.input-field input:focus {
+    border-bottom: 1px solid #000000 !important;
+    box-shadow: 0 1px 0 0 #000000 !important; 
+}
+.input-field textarea:focus + label {
+    color: #000000 !important;
+}
+.input-field textarea:focus {
+    border-bottom: 1px solid #000000 !important;
+    box-shadow: 0 1px 0 0 #000000 !important; 
+}

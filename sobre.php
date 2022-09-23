@@ -67,7 +67,7 @@
         $(document).ready(function(){
             $('.carousel').carousel({
                 fullWidth: true,
-                padding: 9,
+                padding: 100,
             });
         });
     </script>
