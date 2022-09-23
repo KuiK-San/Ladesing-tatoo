@@ -86,7 +86,16 @@
     <article class="avaliacao grey darken-3">
         <div class="container">
             <h2 class="center-align white-text">O que nossos Clientes dizem</h2>
-            <div class="carousel carousel-slider">
+            <div class="carousel col">
+                <img src="img/avaliacao.png" class="carousel-item" alt="avaliação">
+                <img src="img/avaliacao.png" class="carousel-item" alt="avaliação">
+                <img src="img/avaliacao.png" class="carousel-item" alt="avaliação">
+                <img src="img/avaliacao.png" class="carousel-item" alt="avaliação">
+                <img src="img/avaliacao.png" class="carousel-item" alt="avaliação">
+                <img src="img/avaliacao.png" class="carousel-item" alt="avaliação">
+                <img src="img/avaliacao.png" class="carousel-item" alt="avaliação">
+                <img src="img/avaliacao.png" class="carousel-item" alt="avaliação">
+                <img src="img/avaliacao.png" class="carousel-item" alt="avaliação">
                 <img src="img/avaliacao.png" class="carousel-item" alt="avaliação">
                 <img src="img/avaliacao.png" class="carousel-item" alt="avaliação">
                 <img src="img/avaliacao.png" class="carousel-item" alt="avaliação">
@@ -97,12 +106,8 @@
     <?php
     include('modelos/footer.html');
     ?>
-
     <script>
         M.AutoInit();
-        var instance = M.Carousel.init({
-            fullWidth: true
-        })
     </script>
 </body>
 </html>

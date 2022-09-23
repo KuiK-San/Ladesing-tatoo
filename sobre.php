@@ -7,7 +7,6 @@
     <?php
         include('modelos/imports.html');
     ?>
-    <meta http-equiv="refresh" content="3">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>Sobre - LaDesign</title>
 </head>
@@ -36,8 +35,23 @@
         </div>
     </article>
     <article class="grey darken-3">
-        <div class="carousel">
-
+            <div class="container">
+                <h3 class="white-text center-align">Agradecimentos</h3>
+                <div class="carousel col">
+                    <img src="img/avaliacao.png" class="carousel-item" alt="avaliação">
+                    <img src="img/avaliacao.png" class="carousel-item" alt="avaliação">
+                    <img src="img/avaliacao.png" class="carousel-item" alt="avaliação">
+                    <img src="img/avaliacao.png" class="carousel-item" alt="avaliação">
+                    <img src="img/avaliacao.png" class="carousel-item" alt="avaliação">
+                    <img src="img/avaliacao.png" class="carousel-item" alt="avaliação">
+                    <img src="img/avaliacao.png" class="carousel-item" alt="avaliação">
+                    <img src="img/avaliacao.png" class="carousel-item" alt="avaliação">
+                    <img src="img/avaliacao.png" class="carousel-item" alt="avaliação">
+                    <img src="img/avaliacao.png" class="carousel-item" alt="avaliação">
+                    <img src="img/avaliacao.png" class="carousel-item" alt="avaliação">
+                    <img src="img/avaliacao.png" class="carousel-item" alt="avaliação">
+                </div>
+            </div>
         </div>
     </article>
 
@@ -50,7 +64,12 @@
     <!-- #endregion -->
     <script>
         M.AutoInit();
-        $('.carousel').carousel("fullWidth", true)
+        $(document).ready(function(){
+            $('.carousel').carousel({
+                fullWidth: true,
+                padding: 9,
+            });
+        });
     </script>
 </body>
 </html>
