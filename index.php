@@ -18,7 +18,7 @@
     </header>
     <article class="motivos grey darken-4">
         <div class="container">
-            <h2 class="center-align">Por que escolher LaDesign</h2>
+            <h2 class="center-align white-text">Por que escolher LaDesign</h2>
             <div class="row">
                 <div class="col l4">
                     <div class="card small grey black-text">
@@ -85,7 +85,7 @@
     </article>
     <article class="avaliacao grey darken-3">
         <div class="container">
-            <h2 class="center-align">O que nossos Clientes dizem</h2>
+            <h2 class="center-align white-text">O que nossos Clientes dizem</h2>
             <div class="carousel">
                 <div class="carousel-item">
                     <img src="img/avaliacao.png" alt="avaliação">

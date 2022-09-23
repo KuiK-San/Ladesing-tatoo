@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;900&display=swap');
+*{
+    user-select: none;
+}
 :root{
     font-size: 62,5%;
 }
@@ -39,11 +42,10 @@ header{
         margin-top: -56px !important;
     }
 }
-.motivos{
+article{
     width: 100%;
     height: auto;
-    background-color: rgb(0, 0, 0);
-    color: white;
+    color: rgb(0, 0, 0);
     padding: 64px;
 
 }
@@ -57,11 +59,6 @@ i:hover{
 .motivos h2{
     margin-bottom: 5%;
 }
-.avaliacao{
-    width: 100%;
-    height: auto;
-    background-color: rgb(0, 0, 0);
-    color: white;
-    padding: 64px;
-
+.sobre > p{
+    text-align: justify !important;
 }
