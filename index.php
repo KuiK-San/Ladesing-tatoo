@@ -86,43 +86,10 @@
     <article class="avaliacao grey darken-3">
         <div class="container">
             <h2 class="center-align white-text">O que nossos Clientes dizem</h2>
-            <div class="carousel">
-                <div class="carousel-item">
-                    <img src="img/avaliacao.png" alt="avaliação">
-                </div>
-                <div class="carousel-item">
-                    <img src="img/avaliacao.png" alt="avaliação">
-                </div>
-                <div class="carousel-item">
-                    <img src="img/avaliacao.png" alt="avaliação">
-                </div>
-                <div class="carousel-item">
-                    <img src="img/avaliacao.png" alt="avaliação">
-                </div>
-                <div class="carousel-item">
-                    <img src="img/avaliacao.png" alt="avaliação">
-                </div>
-                <div class="carousel-item">
-                    <img src="img/avaliacao.png" alt="avaliação">
-                </div>
-                <div class="carousel-item">
-                    <img src="img/avaliacao.png" alt="avaliação">
-                </div>
-                <div class="carousel-item">
-                    <img src="img/avaliacao.png" alt="avaliação">
-                </div>
-                <div class="carousel-item">
-                    <img src="img/avaliacao.png" alt="avaliação">
-                </div>
-                <div class="carousel-item">
-                    <img src="img/avaliacao.png" alt="avaliação">
-                </div>
-                <div class="carousel-item">
-                    <img src="img/avaliacao.png" alt="avaliação">
-                </div>
-                <div class="carousel-item">
-                    <img src="img/avaliacao.png" alt="avaliação">
-                </div>
+            <div class="carousel carousel-slider">
+                <img src="img/avaliacao.png" class="carousel-item" alt="avaliação">
+                <img src="img/avaliacao.png" class="carousel-item" alt="avaliação">
+                <img src="img/avaliacao.png" class="carousel-item" alt="avaliação">
             </div>
         </div>
         
@@ -133,7 +100,9 @@
 
     <script>
         M.AutoInit();
-        $('.carousel').carousel("fullWidth", true)
+        var instance = M.Carousel.init({
+            fullWidth: true
+        })
     </script>
 </body>
 </html>

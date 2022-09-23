@@ -46,7 +46,8 @@ article{
     width: 100%;
     height: auto;
     color: rgb(0, 0, 0);
-    padding: 64px;
+    padding-top: 64px;
+    padding-bottom: 64px;
 
 }
 .linhamotivos{
@@ -59,6 +60,10 @@ i:hover{
 .motivos h2{
     margin-bottom: 5%;
 }
-.sobre > p{
+.historia{
     text-align: justify !important;
+}
+.historia{
+    padding-top: calc(64px + 64px);
+    margin-top: -64px;
 }
