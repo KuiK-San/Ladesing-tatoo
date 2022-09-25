@@ -1,3 +1,8 @@
+<?php
+    session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -18,15 +23,22 @@
             <div class="row">
                 <div class="col l6 offset-l6 formulario">
                     <h4 class="center-align grey-text">
-                        Crie sua conta!
+                        Entrar na sua conta
                     </h4>
-                    <form action="" method="post">
+                    <?php 
+                    
+                    if(isset($_SESSION['menor'])){ ?>
+                        <p class="red-text center-align">Você precisar ter 18 anos ou mais</p><?php
+                        unset($_SESSION['menor']);
+                    }
+                    ?>
+                    <form action="cadastros/cad_user.php" method="post">
                         <div class="input-field col s10 offset-l1">
                             <input id="nome" name="nome" max-length="100" type="text" class="validate black-text">
                             <label for="nome" class="">Nome Completo</label>
                         </div>
                         <div class="input-field col s10 offset-l1">
-                            <input id="email" type="email" max-length="200"  class="validate black-text">
+                            <input id="email" type="email" name="email" max-length="200"  class="validate black-text">
                             <label for="email" class="">E-mail</label>
                         </div>
                         <div class="input-field col s10 offset-l1">
@@ -45,7 +57,7 @@
                             <input id="data" name="data" max-length="100" type="text" class="validate black-text">
                             <label for="data" class="">Data de nascimento</label>
                         </div>
-                        <p class="center-align col s12 sem-margin">Já tem uma conta? <a href="">Entrar.</a> <a href="../index.php">Voltar</a></p>
+                        <p class="center-align col s12 sem-margin">Já tem uma conta? <a href="login.php">Entrar.</a> <a href="../index.php">Voltar</a></p>
                         <button type="submit" class="col s10 offset-l1 btn waves-effect waves-light botao">Criar conta</button>
                     </form>
                 </div>
