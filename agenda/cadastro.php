@@ -25,6 +25,7 @@
                     <h4 class="center-align grey-text">
                         Entrar na sua conta
                     </h4>
+<<<<<<< HEAD
                     <?php 
                     
                     if(isset($_SESSION['menor'])){ ?>
@@ -32,6 +33,8 @@
                         unset($_SESSION['menor']);
                     }
                     ?>
+=======
+>>>>>>> 83badd0411611e3bce06e8cfbc465dd33d76f8ed
                     <form action="cadastros/cad_user.php" method="post">
                         <div class="input-field col s10 offset-l1">
                             <input id="nome" name="nome" max-length="100" type="text" class="validate black-text">
