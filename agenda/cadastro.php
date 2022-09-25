@@ -20,7 +20,7 @@
                     <h4 class="center-align grey-text">
                         Crie sua conta!
                     </h4>
-                    <form action="" method="post">
+                    <form action="cadastros/cad_user.php" method="post">
                         <div class="input-field col s10 offset-l1">
                             <input id="nome" name="nome" max-length="100" type="text" class="validate black-text">
                             <label for="nome" class="">Nome Completo</label>
