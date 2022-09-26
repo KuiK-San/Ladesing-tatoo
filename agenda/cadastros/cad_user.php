@@ -1,6 +1,5 @@
 <?php
 
-<<<<<<< HEAD
     session_start();
 
     $nome = $_POST['nome'];
@@ -14,7 +13,9 @@
     
     include('../conect/conexao.php');
 
-    if($ano_nas - date('Y') >= 18){
+
+    
+    if(date('Y') - intval($ano_nas) >= 18){
 
         $query = "INSERT INTO `usuarios`(`email`, `nome`, `senha`, `telefone`, `cpf`, `data_nas`) VALUES ('$email','$nome','$senha','$telefone','$cpf','$data')";
 
@@ -25,16 +26,4 @@
         $_SESSION['menor'] = TRUE;
         header('location: ../cadastro.php');
     }
-=======
-    $nome = $_POST['nome'];
-    $email = $_POST['email'];
-    $senha = $_POST['senha'];
-    $telefone = $_POST['fone'];
-    $cpf = $_POST['cpf'];
-    $data = $_POST['data'];
-
-    include('../conect/conexao.php');
-
-    $query = "INSERT INTO"
->>>>>>> 83badd0411611e3bce06e8cfbc465dd33d76f8ed
 ?>
