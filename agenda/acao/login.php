@@ -23,7 +23,7 @@ if(!empty($_POST['email']) && !empty($_POST['senha'])){
                 break;
             
             case '3':
-                header('location: ../painel_adm.php');
+                header('location: ../painel_adm.php?file=agendamento&dir=tabela');
                 break;
             
             default:
