@@ -31,6 +31,10 @@
                         <p class="red-text center-align">Você precisar ter 18 anos ou mais</p><?php
                         unset($_SESSION['menor']);
                     }
+                    if(isset($_SESSION['email'])){ ?>
+                        <p class="red-text center-align">E-mail já cadastrado</p><?php
+                        unset($_SESSION['email']);
+                    }
                     ?>
                     <form action="cadastros/cad_user.php" method="post">
                         <div class="input-field col s10 offset-l1">

@@ -13,17 +13,22 @@
     
     include('../conect/conexao.php');
 
-
-    
-    if(date('Y') - intval($ano_nas) >= 18){
-
-        $query = "INSERT INTO `usuarios`(`email`, `nome`, `senha`, `telefone`, `cpf`, `data_nas`) VALUES ('$email','$nome','$senha','$telefone','$cpf','$data')";
-
-        $sql = mysqli_query($conexao, $query); 
-
-        header('location: ../login.php');
-    }else{
-        $_SESSION['menor'] = TRUE;
+    $query_1 = "SELECT * FROM `usuarios` WHERE 'email' = '$email'";
+    if ( mysqli_query($conexao, $query_1)) {
+        $_SESSION['email'] = TRUE;
         header('location: ../cadastro.php');
+    }else{
+    
+        if(date('Y') - intval($ano_nas) >= 18){
+
+            $query = "INSERT INTO `usuarios`(`email`, `nome`, `senha`, `telefone`, `cpf`, `data_nas`) VALUES ('$email','$nome','$senha','$telefone','$cpf','$data')";
+
+            $sql = mysqli_query($conexao, $query); 
+
+            header('location: ../login.php');
+        }else{
+            $_SESSION['menor'] = TRUE;
+            header('location: ../cadastro.php');
+        }
     }
 ?>
