@@ -14,7 +14,11 @@
     include('../conect/conexao.php');
 
     $query_1 = "SELECT * FROM `usuarios` WHERE 'email' = '$email'";
-    if ( mysqli_query($conexao, $query_1)) {
+
+    $sql1 = mysqli_query($conexao, $query_1);
+    
+
+    if (empty($sql1)) {
         $_SESSION['email'] = TRUE;
         header('location: ../cadastro.php');
     }else{

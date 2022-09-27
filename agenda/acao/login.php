@@ -16,14 +16,18 @@ if(!empty($_POST['email']) && !empty($_POST['senha'])){
 
     if(password_verify($user_senha, $row['senha'])){
         $_SESSION['usuario'] = $row['nome'];
+        $_SESSION['nivel'] = $row['nivel'];
 
         switch ($row['nivel']) {
             case '2':
                 header('location: ../painel_fun.php');
+
                 break;
             
             case '3':
-                header('location: ../painel_adm.php?file=agendamento&dir=tabela');
+                header('location: ../painel_adm.php?file=agendamento&dir=pasta');
+                $_SESSION['msg_class'] = "green white-text";
+                $_SESSION['mensagem'] = "Olá " .  $row['nome'] . ". Sejá bem vindo ao painel de administrador";
                 break;
             
             default:
