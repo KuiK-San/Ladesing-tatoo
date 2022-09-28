@@ -1,4 +1,7 @@
-<div class="container valign-wrapper">
+<div class="container">
+    <h2 class="col l12 center-align">
+        Tabela de usuário
+    </h2>
     <table class="striped responsive-table">
         <thead>
             <th>Email</th>
@@ -32,7 +35,7 @@
                             break;
                         
                         default:
-                            echo('Usuario Padrão');
+                            echo('Usuário Padrão');
                             break;
                     }?></td>
                     <td>

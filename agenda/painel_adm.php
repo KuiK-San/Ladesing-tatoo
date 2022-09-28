@@ -29,7 +29,7 @@
                     <li><a href="?file=orcamentos&dir=pasta">Orçamentos</a></li>
                     <li><a href="?file=port&dir=pasta">Portfólio</a></li>
                     <li><a href="?file=agendamento&dir=pasta">Agendamentos</a></li>
-                    <li><a href="?file=user&dir=pasta">Usuarios</a></li>
+                    <li><a href="?file=user&dir=pasta">Usuários</a></li>
                     <li><a href="acao/logout.php">Sair</a></li>
                 </ul>
             </div>
@@ -40,7 +40,7 @@
         <li><a href="?file=orcamentos&dir=pasta" class="waves-effect waves-light white-text">Orçamentos</a></li>
         <li><a href="?file=agendamento&dir=pasta" class="waves-effect waves-light white-text">Agendamentos</a></li>
         <li><a href="?file=port&dir=pasta" class="waves-effect waves-light white-text">Portfólio</a></li>
-        <li><a href="?file=user&dir=pasta" class="waves-effect waves-light white-text">Usuarios</a></li>
+        <li><a href="?file=user&dir=pasta" class="waves-effect waves-light white-text">Usuários</a></li>
         <li><a href="acao/logout.php" class="waves-effect waves-light white-text">Sair <i class="material-icons white-text">exit_to_app</i></a></li>
     </ul>
 

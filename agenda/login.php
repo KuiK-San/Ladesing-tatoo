@@ -24,7 +24,7 @@
                     session_start();
                     if(isset($_SESSION['erro_senha'])){
                         ?>
-                        <p class="red-text center-align">Senha ou usuario incorretos</p>
+                        <p class="red-text center-align">Senha ou usuário incorretos</p>
                         <?php
                         unset($_SESSION['erro_senha']);
                     }
