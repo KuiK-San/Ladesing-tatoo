@@ -36,8 +36,8 @@
                             break;
                     }?></td>
                     <td>
-                        <a href="./acao/excluir.php?id=<?=$row['id_user']?>&tabela=usuarios&volta=painel_adm.php&id_name=id_user"><i class="material-icons">delete</i></a>
-                        <a href="./acao/altera_user.php?id=<?=$row['id_user']?>"><i class="material-icons">autorenew</i></a>
+                        <a href="./acao/excluir_user.php?id=<?=$row['id_user']?>"><i class="material-icons">delete</i></a>
+                        <a href="?file=altera_user&dir=acao&id=<?=$row['id_user']?>"><i class="material-icons">autorenew</i></a>
 
 
                     </td>

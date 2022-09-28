@@ -45,7 +45,7 @@
     </ul>
 
     <?php
-        require('./' . $_GET['dir'] . '/' . $_GET['file'] . '.php');
+        include('./' . $_GET['dir'] . '/' . $_GET['file'] . '.php');
     ?>
 
     <script>

@@ -17,6 +17,7 @@ if(!empty($_POST['email']) && !empty($_POST['senha'])){
     if(password_verify($user_senha, $row['senha'])){
         $_SESSION['usuario'] = $row['nome'];
         $_SESSION['nivel'] = $row['nivel'];
+        $_SESSION['email'] = $row['email'];
 
         switch ($row['nivel']) {
             case '2':

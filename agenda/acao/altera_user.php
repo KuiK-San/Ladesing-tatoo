@@ -2,7 +2,7 @@
 
 $id_user = $_GET['id'];
 
-include('../conect/conexao.php');
+include('conect/conexao.php');
 
 $query = "SELECT * FROM `usuarios`";
 
@@ -10,23 +10,26 @@ $sql = mysqli_query($conexao, $query);
 
 $row = mysqli_fetch_assoc($sql);
 
+if (isset($_POST['altera'])) {
+    $id_user = $_GET['id'];
+    $nome = $_POST['nome'];
+    $email = $_POST['email'];
+    $fone = $_POST['fone'];
+    $cpf = $_POST['cpf'];
+    $nivel = $_POST['nivel'];
+
+    $query = "UPDATE `usuarios` SET `email`='$email',`nome`='$nome',`telefone`='$fone',`cpf`='$cpf',`nivel`='$nivel' WHERE `id_user` = $id_user";
+
+    $sql = mysqli_query($conexao, $query);
+
+    header('location: ?file=user&dir=pasta');
+}
+
 
 
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php
-    include('../../modelos/imports.html');
-    ?>
-    <title>Document</title>
-</head>
-<body>
     <div class="container">
-        <form action="./altera_true.php?id=<?= $id_user?>" method="post">
+        <form action="" method="post">
             <div class="input-field col s10 offset-l1">
                 <input id="nome" name="nome" max-length="100" value="<?= $row['nome'] ?>" type="text" class="validate black-text">
                 <label for="nome" class="">Nome Completo</label>
@@ -53,13 +56,9 @@ $row = mysqli_fetch_assoc($sql);
                         echo('selected');}?> value="3">Administrador</option>
                 </select>
             </div>
-            <p class="   col s12 sem-margin"><a href="../index.php">Voltar</a></p>
-            <button type="submit" class="col s10 offset-l1 btn waves-effect waves-light botao">Alterar conta</button>
+            <p class="   col s12 sem-margin"><a href="index.php">Voltar</a></p>
+            <button type="submit" name="altera" class="col s10 offset-l1 btn waves-effect waves-light botao">Alterar conta</button>
 
         <script>
             M.AutoInit();
         </script>
-        </form>
-    </div>
-</body>
-</html>
