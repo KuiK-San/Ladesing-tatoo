@@ -17,9 +17,9 @@
         <nav class="z-depth-0 ">
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <div class="container nav-wrapper ">
-                <a href="#" class="brand-logo hide-on-small-only"><img src="../img/logo.png" alt="Logo"></a>
+                <a href="../index.php" class="brand-logo hide-on-small-only"><img src="../img/logo.png" alt="Logo"></a>
 
-                <a href="#" class="brand-logo show-on-small hide-on-med-and-up"><img src="../img/ladesign_header.png" alt="Logo"></a>
+                <a href="../index.php" class="brand-logo show-on-small hide-on-med-and-up"><img src="../img/ladesign_header.png" alt="Logo"></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a href="../index.php">Home</a></li>
                 <li><a href="../agenda/portfolio.php">Portfólio</a></li>
