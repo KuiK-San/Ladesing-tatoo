@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 28-Set-2022 às 03:23
+-- Tempo de geração: 29-Set-2022 às 15:56
 -- Versão do servidor: 10.4.24-MariaDB
 -- versão do PHP: 8.1.6
 
@@ -24,6 +24,21 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `orcamentos`
+--
+
+CREATE TABLE `orcamentos` (
+  `id_orc` int(11) NOT NULL,
+  `nome_cli` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `telefone` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `path` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL DEFAULT '../img/orc/default.png',
+  `mensagem` varchar(500) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `port`
 --
 
@@ -33,18 +48,6 @@ CREATE TABLE `port` (
   `data_up` datetime NOT NULL,
   `id_user` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Extraindo dados da tabela `port`
---
-
-INSERT INTO `port` (`id_port`, `path`, `data_up`, `id_user`) VALUES
-(4, '../img/port/6333a0f6a0d32.jpg', '2022-09-27 22:18:46', 12),
-(5, '../img/port/6333a1003cd5d.jpg', '2022-09-27 22:18:56', 12),
-(6, '../img/port/6333a1071627b.jpg', '2022-09-27 22:19:03', 12),
-(7, '../img/port/6333a10f26971.jpg', '2022-09-27 22:19:11', 12),
-(8, '../img/port/6333a118be50b.jpg', '2022-09-27 22:19:20', 12),
-(9, '../img/port/6333a123e9470.jpg', '2022-09-27 22:19:31', 12);
 
 -- --------------------------------------------------------
 
@@ -75,6 +78,12 @@ INSERT INTO `usuarios` (`id_user`, `email`, `nome`, `senha`, `telefone`, `cpf`, 
 --
 
 --
+-- Índices para tabela `orcamentos`
+--
+ALTER TABLE `orcamentos`
+  ADD PRIMARY KEY (`id_orc`);
+
+--
 -- Índices para tabela `port`
 --
 ALTER TABLE `port`
@@ -91,16 +100,22 @@ ALTER TABLE `usuarios`
 --
 
 --
+-- AUTO_INCREMENT de tabela `orcamentos`
+--
+ALTER TABLE `orcamentos`
+  MODIFY `id_orc` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
 -- AUTO_INCREMENT de tabela `port`
 --
 ALTER TABLE `port`
-  MODIFY `id_port` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_port` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de tabela `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id_user` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id_user` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
