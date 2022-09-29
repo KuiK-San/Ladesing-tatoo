@@ -5,37 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php
-    include('../modelos/imports.html');
+    include('modelos/imports.html');
     ?>
-    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../css/style.css">
 <!--     <meta http-equiv="refresh" content="3"> -->
     <title>Portfólio - Ladesign</title>
 </head>
 <body>
-    <div class="navbar-fixed">
-        <nav class="z-depth-0 ">
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-            <div class="container nav-wrapper ">
-                <a href="../index.php" class="brand-logo hide-on-small-only"><img src="../img/logo.png" alt="Logo"></a>
-
-                <a href="../index.php" class="brand-logo show-on-small hide-on-med-and-up"><img src="../img/ladesign_header.png" alt="Logo"></a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="../index.php">Home</a></li>
-                <li><a href="../agenda/portfolio.php">Portfólio</a></li>
-                <li><a href="../sobre.php">Sobre</a></li>
-                <li><a href="../agenda/">Agenda</a></li>
-                </ul>
-            </div>
-            
-        </nav>
-    </div>
-    <ul class="sidenav black" id="mobile-demo">
-        <li><a href="../index.php" class="waves-effect waves-light white-text">Home</a></li>
-        <li><a href="../agenda/portfolio.php" class="waves-effect waves-light white-text">Portfólio</a></li>
-        <li><a href="../sobre.php" class="waves-effect waves-light white-text">Sobre</a></li>
-        <li><a href="../agenda/" class="waves-effect waves-light white-text">Agenda</a></li>
-    </ul>
+    <?php
+        include('modelos/navbar.html');
+    ?>
 
     <article class="historia grey darken-3"> 
         <div class="container">
@@ -46,7 +24,7 @@
             </div>
             <div class="row">
                 <?php
-                include('./conect/conexao.php');
+                include('./agenda/conect/conexao.php');
                 
                 $query = "SELECT * FROM `port`";
                 $sql = mysqli_query($conexao, $query);
@@ -71,7 +49,7 @@
     </article>
 
     <?php
-    include('../modelos/footer.html');
+    include('modelos/footer.html');
     ?>
     <script>
         M.AutoInit();

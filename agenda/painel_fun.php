@@ -1,6 +1,6 @@
 <?php
     include('./acao/verificador.php');
-    if ($_SESSION['nivel'] != 3) {
+    if ($_SESSION['nivel'] != 2) {
         header('location: index.php');
     }
 ?>
@@ -14,7 +14,7 @@
     <?php
     include('../modelos/imports.html');
     ?>
-    <title>Area Administrativa</title>
+    <title>Area do tatuador</title>
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
 </head>
 <body>
@@ -26,9 +26,8 @@
 
                 <a href="#" class="brand-logo show-on-small hide-on-med-and-up"><img src="../img/ladesign_header.png" alt="Logo"></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="?file=orcamentos&dir=pasta">Orçamentos</a></li>
-                    <li><a href="?file=port&dir=pasta">Portfólio</a></li>
-                    <li><a href="?file=user&dir=pasta">Usuários</a></li>
+                    <li><a href="?file=orcamentos_tat&dir=pasta">Orçamentos</a></li>
+                    <li><a href="?file=port_tat&dir=pasta">Portfólio</a></li>
                     <li><a href="acao/logout.php">Sair</a></li>
                 </ul>
             </div>
@@ -36,9 +35,8 @@
         </nav>
     </div>
     <ul class="sidenav black" id="mobile-demo">
-        <li><a href="?file=orcamentos&dir=pasta" class="waves-effect waves-light white-text">Orçamentos</a></li>
-        <li><a href="?file=port&dir=pasta" class="waves-effect waves-light white-text">Portfólio</a></li>
-        <li><a href="?file=user&dir=pasta" class="waves-effect waves-light white-text">Usuários</a></li>
+        <li><a href="?file=orcamentos_tat&dir=pasta" class="waves-effect waves-light white-text">Orçamentos</a></li>
+        <li><a href="?file=port_tat&dir=pasta" class="waves-effect waves-light white-text">Portfólio</a></li>
         <li><a href="acao/logout.php" class="waves-effect waves-light white-text">Sair <i class="material-icons white-text">exit_to_app</i></a></li>
     </ul>
 

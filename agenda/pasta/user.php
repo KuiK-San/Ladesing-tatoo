@@ -1,7 +1,13 @@
+<?php
+    include('./acao/verificador.php');
+    if ($_SESSION['nivel'] != 3) {
+        header('location: index.php');
+    }
+?>
 <div class="container">
-    <h2 class="col l12 center-align">
+    <h3 class="col l12 center-align">
         Tabela de usuário
-    </h2>
+    </h3>
     <table class="striped responsive-table">
         <thead>
             <th>Email</th>

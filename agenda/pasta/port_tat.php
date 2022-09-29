@@ -1,6 +1,6 @@
 <?php
     include('./acao/verificador.php');
-    if ($_SESSION['nivel'] != 3) {
+    if ($_SESSION['nivel'] != 2) {
         header('location: index.php');
     }
     include('./conect/conexao.php');
@@ -30,7 +30,6 @@
             <th>Imagem</th>
             <th>Nome do tatuador</th>
             <th>Data de publicação</th>
-            <th>Ação</th>
         </thead>
         <tbody>
             <?php
@@ -48,11 +47,6 @@
                     <td><img src="../<?=$row['path']?>" class="responsive-img" alt=""> </td>
                     <td><?= $row_user['nome'] ?></td>
                     <td><?= $row['data_up'] ?></td>
-                    <td>
-                        <a href="./acao/excluir_port.php?id=<?=$row['id_port']?>"><i class="material-icons">delete</i></a>
-
-
-                    </td>
                 </tr>
            <?php }
 

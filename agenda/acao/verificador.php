@@ -1,6 +1,7 @@
 <?php
-
-session_start();
+if(!isset($_SESSION)){
+    session_start(); //verificar se tem seção ativa, se não starta a sessão;
+}
 
 if (!(isset($_SESSION['usuario'])) == true && !(isset($_SESSION['email'])) == true) {
     unset($_SESSION['usuario']);

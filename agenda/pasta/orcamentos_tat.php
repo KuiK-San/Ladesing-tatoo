@@ -1,6 +1,6 @@
 <?php
     include('./acao/verificador.php');
-    if ($_SESSION['nivel'] != 3) {
+    if ($_SESSION['nivel'] != 2) {
         header('location: index.php');
     }
 ?>
@@ -46,11 +46,8 @@
                     <td><?= $row['email'] ?></td>
                     <td><?= $row['mensagem'] ?></td>
                     <td>
-                        <a href="./acao/excluir_orc.php?id=<?=$row['id_orc']?>"><i class="material-icons">delete</i></a>
                         <a href="mailto:<?=$row['email'] ?>"><i class="material-icons">contact_mail</i></a>
                         <a href="tel:+55<?=$telefone?>"><i class="material-icons">contact_phone</i></a>
-
-
                     </td>
                 </tr>
            <?php }

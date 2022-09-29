@@ -18,21 +18,25 @@ if(!empty($_POST['email']) && !empty($_POST['senha'])){
         $_SESSION['usuario'] = $row['nome'];
         $_SESSION['nivel'] = $row['nivel'];
         $_SESSION['email'] = $row['email'];
+        $_SESSION['telefone'] = $row['telefone'];
 
         switch ($row['nivel']) {
             case '2':
-                header('location: ../painel_fun.php');
-
+                header('location: ../painel_fun.php?file=orcamentos_tat&dir=pasta');
+                $_SESSION['msg_class'] = "green white-text";
+                $_SESSION['mensagem'] = "Olá " .  $row['nome'] . ". Sejá bem vindo ao painel de tatuador";
                 break;
             
             case '3':
-                header('location: ../painel_adm.php?file=agendamento&dir=pasta');
+                header('location: ../painel_adm.php?file=orcamentos&dir=pasta');
                 $_SESSION['msg_class'] = "green white-text";
                 $_SESSION['mensagem'] = "Olá " .  $row['nome'] . ". Sejá bem vindo ao painel de administrador";
                 break;
             
             default:
                 header('location: ../index.php');
+                $_SESSION['msg_class'] = "green white-text";
+                $_SESSION['mensagem'] = "Olá " .  $row['nome'] . ". Sejá bem vindo ao painel de clientes";
                 break;
         }
     }else{

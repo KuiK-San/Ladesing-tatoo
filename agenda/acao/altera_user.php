@@ -4,7 +4,7 @@ $id_user = $_GET['id'];
 
 include('conect/conexao.php');
 
-$query = "SELECT * FROM `usuarios`";
+$query = "SELECT * FROM `usuarios` WHERE `id_user` = $id_user";
 
 $sql = mysqli_query($conexao, $query);
 
